@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <title>Edu. Fisica - El Guadual</title>
+    <meta name="keywords" content="guadual,rivera,huila,educación,edufisica,alvaro,velasquez" >
+    <meta name="description" content="Sitio web educativo del área de educación física, recreación y deporte">
+    <meta name="author" content="Javier Velasquez">
+    <meta name="robots"  content="index,follow">
+
+    <!-- Bootstrap and styles files -->
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="icon" href="images/icon.ico">
+    <link rel="icon" href="data:;base64,iVBORwOKGO=" />
+    <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+</head>
+
+<body>
+    <div id="fb-root"></div>
+    <script async defer crossorigin="anonymous" src="https://connect.facebook.net/es_LA/sdk.js#xfbml=1&version=v9.0" nonce="DxIS5xsC"></script>
+    <header class="jumbotron">
+        <!-- Navbar -->
+        <nav class="navbar sticky-top navbar-expand-lg">
+            <div class="container-fluid">
+              <a class="navbar-brand" href="index.html"><h1 class="animate__animated animate__flip">I.E. El Guadual</h1></a>
+              <button id="btn-menu" class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse text-center" id="navbarSupportedContent">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                  <li class="nav-item">
+                    <a id="homeMenu" class="nav-link active" title="Inicio" aria-current="page" href="index.html">Inicio</a>
+                  </li>
+                  <li  class="nav-item">
+                    <a id="areaMenu" onclick="$cont.loadArea();" class="nav-link" title="Plan de área" href="#">Plan de área</a>
+                  </li>
+                  <li class="nav-item">
+                    <a id="guiasMenu" class="nav-link" onclick="$cont.loadGuias();" href="#" title="Guías y actividades">Guías y actividades</a>
+                  </li>
+                  <li class="nav-item">
+                    <a id="reglaMenu" class="nav-link" onclick="$cont.loadRegla();" href="#" title="Reglamentos deportivos">Reglamentos deportivos</a>
+                  </li>
+                  <li class="nav-item">
+                    <a id="videosMenu" class="nav-link" onclick="$cont.loadVideos();" href="#" title="Videos y rutinas">Videos y rutinas</a>
+                  </li>
+                </ul>
+              </div><!--collapse-->
+            </div><!--container jumbotron-->
+        </nav><!-- Navbar -->
+        <!-- Background image - Carousel -->
+      <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
+          <ol class="carousel-indicators">
+            <li data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"></li>
+            <li data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"></li>
+            <li data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"></li>
+          </ol>
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <img src="images/background_2.jpg" class="img_bg img-fluid" alt="background_image">
+            </div>
+            <div class="carousel-item">
+              <img src="images/background_1.jpg" class="img_bg img-fluid" alt="background_image">
+            </div>
+            <div class="carousel-item">
+              <img src="images/background_0.jpg" class="img_bg img-fluid" alt="background_image">
+            </div>
+          </div>
+          <a class="carousel-control-prev" href="#carouselExampleCaptions" role="button" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </a>
+          <a class="carousel-control-next" href="#carouselExampleCaptions" role="button" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </a>
+          <div class="offset-2 col-8 mask text-center">
+            <div class="d-flex justify-content-center align-items-center h-100">
+            <div class="text-white">
+                <h2 class="mb-3" >EDUCACIÓN VIRTUAL </h2>
+                <h1 class="text-animation">
+                  <a href="" class="typewrite" data-period="1500" data-type='["Educación física", "Recreación", "Deporte"]'>
+                    <span class="wrap"></span>
+                  </a>
+                </h1>
+                <h4 class="mb-1">Alvaro Velasquez Soto</h4>
+                <h5 class="mb-3">Docente</h5>
+            </div>
+            </div>
+          </div>
+      </div><!-- background image -->
+    </header>
+    <!-- MAIN CONTENT (AJAX) -->
+    <section id="main-content" class="container"></section><!-- main content(AJAX) -->
+
+    <!-- MODAL VALIDATE-MESSAGE -->
+    <section>
+      <div id="modal-validate" class="modal modal-backdrop" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered">
+          <div class="modal-content">
+            <div class="text-center pt-3">
+              <h5 class="modal-title">Mensaje enviado<br> correctamente!</h5>
+            </div>
+            <div class="modal-body text-center">
+              <p>Gracias por escribirnos.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section><!--modal validate-message-->
+
+    <!-- FB COMMENTS -->
+    <section id='fb' class="container com-fb mb-3" >
+      <div class="fb-comments" data-href="https://edufisicaelguadual.000webhostapp.com/index.html" data-width="100%" data-numposts="5"></div>
+    </section><!-- fb comments -->
+
+    <footer class="footer text-white text-center text-lg-start">
+        <div class="container p-4">
+          <div class="row">
+            <div class="col-lg-6 col-md-12 mb-3 mb-md-0 order-1 order-sm-1">
+              <h5 class="text-uppercase">Edufísica - El Guadual</h5>
+              <p>
+                <i>Web educativo del área de educación física, creación y deporte.</i>
+              </p>
+              <p>
+                Contenido realizado por el profesor Alvaro Velasquez Soto.<br> Diseño e implementación del sitio por el ingeniero Javier Velasquez.
+              </p>
+            </div>
+            <div class="col-lg-4 col-md-12 mb-4 mb-md-0 text-center order-3 order-sm-2">
+              <h5 class="text-uppercase mb-0">Contacto</h5>
+      
+              <ul class="list-unstyled">
+                <li>
+                  <br>
+                  <a href="mailto:alvesneivacol@gmail.com?subject=BLOG%20EDUFISICA" class="text-white">Email: alvesneivacol@gmail.com</a>
+                </li>
+                <li>
+                  <a href="#!" class="text-white">Celular: +57 322 442 1704</a>
+                </li>
+                <li>
+                  <a href="#!" class="text-white">Neiva-Huila (Colombia)</a>
+                </li>
+              </ul>
+            </div>
+            <div class="col-lg-2 text-center order-2 order-sm-3">
+              <a href="https://api.whatsapp.com/send?phone=573224421704" target="blank">
+                <img class="social" src="/fonts/whatsapp.svg" alt="WhatsApp-icon">
+              </a>
+              <a href="https://www.facebook.com/alvaro.velasquezsoto" target="blank">
+                <img class="social" src="/fonts/facebook.svg" alt="WhatsApp-icon">
+              </a>
+              <a href="mailto:alvesneivacol@gmail.com?subject=BLOG%20EDUFISICA">
+                <img class="social" src="/fonts/gmail.svg" alt="WhatsApp-icon">
+              </a>
+            </div>
+          </div>
+          
+        </div><!-- Container footer -->
+      
+        <!-- Copyright -->
+        <div class="box-over text-center p-3">
+          © 2021 Copyright:
+          <a class="text-white" href="https://mdbootstrap.com/">El Guadual (Rivera-Huila)</a>
+        </div>
+        <!-- Copyright -->
+    </footer>
+    <!-- Pluggins and JS files -->
+    <script src="/js/jquery-3.5.1.min.js"></script>
+    <script src="/js/popper.min.js"></script>
+    <script src="/js/bootstrap.min.js"></script>
+    <script src="https://kit.fontawesome.com/2c36e9b7b1.js" crossorigin="anonymous"></script>
+    <script src="/js/ajax-utils.js"></script>
+    <script src="/js/script.js"></script>
+    <script src="/js/validation-form.js"></script>
+</body>
+</html>
