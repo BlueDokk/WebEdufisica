@@ -1,4 +1,4 @@
-html {
+* {
     font-family: Helvetica, sans-serif;
     box-sizing: border-box;
     padding:0px;
@@ -49,17 +49,9 @@ a {
 
 /**************** JUMBOTRON ****************/
 .img_bg {
-    background-image: url(/images/background_2.jpg);
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-    height: 490px;
-    margin: 0px 0px 10px 0px;
-    transition: background-image 1s;
-}
-.img_bg{
     object-fit: cover;
     display:block;
+    height:490px;
     width:100%;
 }
 .carousel{
@@ -110,14 +102,6 @@ a {
     text-align: justify;
     font-size: 1.25rem;
 }
-.articles {
-    background-color:rgb(255, 146, 40);
-    border-radius: 20px;
-    box-sizing: border-box;
-    font-size: 1.2rem;
-    text-align: justify;
-    color: white;
-}
 .btn-more {
     background-color: rgb(255, 146, 40);
     font-size: 1.2rem;
@@ -137,7 +121,6 @@ a {
 .div-message button{
     float:right;
 }
-
 
 .div-message .titles{
     text-transform: capitalize;
@@ -159,7 +142,7 @@ a {
     margin: 40px 0px;
 }
 
-.typewrite, .typewrite:hover {
+.wrap, .wrap:hover {
     font-size: 3rem;
     margin: 0px 0px;
     color:white;
@@ -316,6 +299,49 @@ form button{
 .form__group-incorrect .form__input{
     border:3px solid #bb2929;
 }
+
+/**************** ARTICLES ****************/
+.articles{
+    margin: 0;
+    width:100%
+}
+.articles .articles__item{
+    background-color: transparent;
+    padding: 5px
+}
+.articles__item .articles__item-box{
+    width:100%;
+    height: 842px;
+    background-color:rgb(255, 146, 40);
+    border-radius: 10px;
+}
+
+.box-img{
+    text-align: center;
+    padding:10px 10px 0px 10px;
+    transition: .5s;
+    width: 100%;
+}
+.box-img img{
+    border-radius: 10px;
+}
+.box-content{
+    padding:0 10px 10px 10px;
+}
+.box-content p{
+    font-size: 1.2rem;
+    padding: 10px;
+    color: white;
+    text-align: justify;
+}
+.box-content h2{
+    text-transform: uppercase;
+    font-size: 1.5rem;
+    color: #fff;
+}
+#ultimo + div{
+    visibility:hidden;
+}
 /**************** MEDIA QUERIES ****************/
 @media(max-width:992px){
     /* NAVBAR */
@@ -367,6 +393,9 @@ form button{
     }
     .videoRutina{
         height: 350px;
+    }
+    .articles__item .articles__item-box{
+    height: 436;
     }
 }
 @media(min-width:768px)and (max-width:991px){
@@ -424,6 +453,9 @@ form button{
     .videoRutina{
         height: 300px;
     }
+    .articles__item .articles__item-box{
+        height: fit-content;
+    }
 }
 @media(min-width:375px) and (max-width:575px){
     /* NAVBAR */
@@ -453,7 +485,7 @@ form button{
     .modal-title{
         font-size: 1rem;
     }
-    .typewrite{
+    .wrap{
         font-size: 2.4rem;
     }
     .pdf{
@@ -462,8 +494,11 @@ form button{
     .videoRutina{
         height: 290px;
     }
-    .form__message{
-        font-size:14px;
+    .form__message p,.form__message i,.form__message b{
+        font-size:15px;
+    }
+    .articles__item .articles__item-box{
+        height: fit-content;
     }
 }
 @media(max-width:374px){
@@ -494,8 +529,8 @@ form button{
     .modal-title{
         font-size: 1.2rem;
     }
-    .typewrite{
-        font-size: 1.8rem;
+    .wrap{
+        font-size: 1.6rem;
     }
     .pdf{
         height:600px;
@@ -503,8 +538,20 @@ form button{
     .videoRutina{
         height: 200px;
     }
-    .form__message{
+    .form__message p,.form__message i,.form__message b{
         font-size:10px;
+    }
+    .box-content p{
+        font-size: 1rem;
+    }
+    .articles #ludica p{
+        font-size: 1rem;
+    }
+    .box-content h2{
+        font-size: 1.2rem;
+    }
+    .articles__item .articles__item-box{
+        height: fit-content;
     }
 }
 
